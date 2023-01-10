@@ -1,0 +1,24 @@
+﻿version: "3.9" # optional since v1.27.0
+services:
+
+  #api:
+  #  build: .
+  #  container_name: htpay_api
+  #  ports:
+  #    - "5000:80"
+
+  db:
+    container_name: bookstore_db
+    image: mcr.microsoft.com/mssql/server:2019-CU12-ubuntu-20.04
+    user: root
+    environment:
+      SA_PASSWORD: "Aa123456"
+      ACCEPT_EULA: "Y"
+    ports:
+      - 1433:1433
+    volumes:
+      - db_data:/var/opt/mssql
+    restart: always
+
+volumes:
+  db_data:

@@ -1,0 +1,97 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Domain", "src\BookStore.Domain\BookStore.Domain.csproj", "{B74B4E90-DEC0-4344-B545-99D7B7CB76FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Repository.EFCore", "src\BookStore.Repository.EFCore\BookStore.Repository.EFCore.csproj", "{C829C022-2C1F-49C4-B444-A9164C113366}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{38DCA434-D393-480E-87B3-2ABEA313DA68}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F839F455-436C-4CE3-BD91-0863EA08013E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{6EF84FC0-C834-4F52-98D0-B935E8AD9354}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.API", "src\BookStore.API\BookStore.API.csproj", "{F57506EB-3C2E-4391-B2F8-4C107144C45E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{1A0430D2-56C6-4609-8B1E-BF6C97484A53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dbscripts", "dbscripts", "{EFEA90CE-C7B6-4A72-9B7E-F3BE8517CCDC}"
+	ProjectSection(SolutionItems) = preProject
+		dbscripts\Identity_tables.sql = dbscripts\Identity_tables.sql
+		dbscripts\bookstore_tables.sql = dbscripts\bookstore_tables.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dbmodel_generator", "dbmodel_generator", "{F9F6C249-68A7-40CD-B92A-62CA69DA1BFF}"
+	ProjectSection(SolutionItems) = preProject
+		tools\dbmodel_generator\generation.yml = tools\dbmodel_generator\generation.yml
+		tools\dbmodel_generator\readme.md = tools\dbmodel_generator\readme.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Repository.Test", "tests\BookStore.Repository.Test\BookStore.Repository.Test.csproj", "{395B8BEC-4EE7-4158-A0A8-E5CFBB2EE65C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Mock", "tests\BookStore.Mock\BookStore.Mock.csproj", "{93368DD3-EFDC-4F10-A404-D10266D231E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.API.Test", "tests\BookStore.API.Test\BookStore.API.Test.csproj", "{AA4A4599-0A41-47EE-AAB4-6B9EADCD237B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7665D6D1-5632-4735-A9D7-11347E777F93}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B74B4E90-DEC0-4344-B545-99D7B7CB76FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B74B4E90-DEC0-4344-B545-99D7B7CB76FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B74B4E90-DEC0-4344-B545-99D7B7CB76FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B74B4E90-DEC0-4344-B545-99D7B7CB76FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C829C022-2C1F-49C4-B444-A9164C113366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C829C022-2C1F-49C4-B444-A9164C113366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C829C022-2C1F-49C4-B444-A9164C113366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C829C022-2C1F-49C4-B444-A9164C113366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F57506EB-3C2E-4391-B2F8-4C107144C45E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F57506EB-3C2E-4391-B2F8-4C107144C45E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F57506EB-3C2E-4391-B2F8-4C107144C45E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F57506EB-3C2E-4391-B2F8-4C107144C45E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC92BBAC-FBE8-49D8-9A90-AB226CF1AD7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC92BBAC-FBE8-49D8-9A90-AB226CF1AD7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC92BBAC-FBE8-49D8-9A90-AB226CF1AD7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC92BBAC-FBE8-49D8-9A90-AB226CF1AD7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03D6A3B1-641A-402A-85F1-C7639F735A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03D6A3B1-641A-402A-85F1-C7639F735A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03D6A3B1-641A-402A-85F1-C7639F735A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03D6A3B1-641A-402A-85F1-C7639F735A7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{395B8BEC-4EE7-4158-A0A8-E5CFBB2EE65C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{395B8BEC-4EE7-4158-A0A8-E5CFBB2EE65C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{395B8BEC-4EE7-4158-A0A8-E5CFBB2EE65C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{395B8BEC-4EE7-4158-A0A8-E5CFBB2EE65C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93368DD3-EFDC-4F10-A404-D10266D231E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93368DD3-EFDC-4F10-A404-D10266D231E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93368DD3-EFDC-4F10-A404-D10266D231E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93368DD3-EFDC-4F10-A404-D10266D231E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA4A4599-0A41-47EE-AAB4-6B9EADCD237B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA4A4599-0A41-47EE-AAB4-6B9EADCD237B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA4A4599-0A41-47EE-AAB4-6B9EADCD237B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA4A4599-0A41-47EE-AAB4-6B9EADCD237B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B74B4E90-DEC0-4344-B545-99D7B7CB76FD} = {F839F455-436C-4CE3-BD91-0863EA08013E}
+		{C829C022-2C1F-49C4-B444-A9164C113366} = {F839F455-436C-4CE3-BD91-0863EA08013E}
+		{F57506EB-3C2E-4391-B2F8-4C107144C45E} = {F839F455-436C-4CE3-BD91-0863EA08013E}
+		{F9F6C249-68A7-40CD-B92A-62CA69DA1BFF} = {1A0430D2-56C6-4609-8B1E-BF6C97484A53}
+		{AC92BBAC-FBE8-49D8-9A90-AB226CF1AD7D} = {38DCA434-D393-480E-87B3-2ABEA313DA68}
+		{03D6A3B1-641A-402A-85F1-C7639F735A7E} = {38DCA434-D393-480E-87B3-2ABEA313DA68}
+		{395B8BEC-4EE7-4158-A0A8-E5CFBB2EE65C} = {38DCA434-D393-480E-87B3-2ABEA313DA68}
+		{93368DD3-EFDC-4F10-A404-D10266D231E2} = {38DCA434-D393-480E-87B3-2ABEA313DA68}
+		{AA4A4599-0A41-47EE-AAB4-6B9EADCD237B} = {38DCA434-D393-480E-87B3-2ABEA313DA68}
+	EndGlobalSection
+EndGlobal

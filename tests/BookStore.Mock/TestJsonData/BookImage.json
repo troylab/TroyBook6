@@ -1,0 +1,9 @@
+[
+  {
+    "Id": 1,
+    "BookId": 1,
+    "FilePath": "images\\book1.png",
+    "CreateOn": null,
+    "UpdateOn": null
+  }
+]

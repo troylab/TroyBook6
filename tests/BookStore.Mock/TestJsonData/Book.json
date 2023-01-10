@@ -1,0 +1,10 @@
+[
+  {
+    "Id": 1,
+    "BookName": "The 7 Habits",
+    "Author": "Covey",
+    "Price": 200,
+    "CreateOn": null,
+    "UpdateOn": null
+  }
+]
