@@ -1,5 +1,6 @@
 ﻿using System;
 using BookStore.Repository.EFCore;
+using BookStore.Domain.Services;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -32,7 +33,7 @@ public class PlaygroundApplication : WebApplicationFactory<Program>
         // Add mock/test services to the builder here
         builder.ConfigureServices(services =>
         {
-            /* remove the PaymentDbContext added in Program.cs*/
+            /* remove the DbContext added in Program.cs*/
             /* ref. https://stackoverflow.com/questions/67876503/replace-dbcontext-in-webapplicationfactory-for-unit-testing */
             var descriptor = services.SingleOrDefault(d => d.ServiceType == typeof(DbContextOptions<BookStoreDbContext>));
             if (descriptor != null)
@@ -48,7 +49,7 @@ public class PlaygroundApplication : WebApplicationFactory<Program>
             }, ServiceLifetime.Scoped);
 
             //在這邊替換 services
-            //services.AddSingleton<IKeyStorage, TestKeyStorage>();
+            services.AddSingleton<IImageStorage, FakeImageStorage>();
 
             services.AddEFRepositories();
         });
