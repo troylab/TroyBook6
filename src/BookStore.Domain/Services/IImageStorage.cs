@@ -9,12 +9,13 @@ public interface IImageStorage
     /// <param name="sourceImageFilePath"></param>
     /// <param name="bookImage"></param>
     /// <returns></returns>
-    void SaveBookImage(string sourceImageFilePath, BookImage bookImage);
+    Task SaveBookImage(BookImage bookImage, byte[] fileContent);
 }
 
 public class FakeImageStorage : IImageStorage
 {
-    public void SaveBookImage(string sourceImageFilePath, BookImage bookImage)
+    public Task SaveBookImage(BookImage bookImage, byte[] fileContent)
     {
+        return Task.CompletedTask;
     }
 }

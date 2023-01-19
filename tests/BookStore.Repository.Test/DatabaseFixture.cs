@@ -52,7 +52,7 @@ public class DatabaseFixture : IDisposable
         else
         {
             //for azure CI docker sqlserver
-            connectionString = "Server=127.0.0.1;Database=payment;User Id=sa;Password=Aa123456;MultipleActiveResultSets=true";
+            connectionString = "Server=127.0.0.1;Database=BookStore;User Id=sa;Password=Aa123456;MultipleActiveResultSets=true";
         }
 
 

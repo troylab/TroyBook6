@@ -40,15 +40,15 @@ public class BookManager
     /// </summary>
     /// <param name="sourceImageFilePath"></param>
     /// <returns></returns>
-    public BookImage CreateBookImage(string sourceImageFilePath)
+    public BookImage CreateBookImage(string filePath, byte[] fileContent)
     {
-        _imageProcessor.Compress(sourceImageFilePath);
+        _imageProcessor.Compress(fileContent);
 
         var img = new BookImage
         {
-            FilePath = sourceImageFilePath
+            FilePath = filePath
         };
-        _imageStorage.SaveBookImage(sourceImageFilePath, img);
+        _imageStorage.SaveBookImage(img, fileContent);
 
         return img;
     }

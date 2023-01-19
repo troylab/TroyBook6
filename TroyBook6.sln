@@ -41,6 +41,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.AzureService", "src\BookStore.AzureService\BookStore.AzureService.csproj", "{C566AA1B-2B48-41D8-BF2C-C0BFFBA05291}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +84,10 @@ Global
 		{AA4A4599-0A41-47EE-AAB4-6B9EADCD237B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA4A4599-0A41-47EE-AAB4-6B9EADCD237B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA4A4599-0A41-47EE-AAB4-6B9EADCD237B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C566AA1B-2B48-41D8-BF2C-C0BFFBA05291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C566AA1B-2B48-41D8-BF2C-C0BFFBA05291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C566AA1B-2B48-41D8-BF2C-C0BFFBA05291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C566AA1B-2B48-41D8-BF2C-C0BFFBA05291}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B74B4E90-DEC0-4344-B545-99D7B7CB76FD} = {F839F455-436C-4CE3-BD91-0863EA08013E}
@@ -93,5 +99,6 @@ Global
 		{395B8BEC-4EE7-4158-A0A8-E5CFBB2EE65C} = {38DCA434-D393-480E-87B3-2ABEA313DA68}
 		{93368DD3-EFDC-4F10-A404-D10266D231E2} = {38DCA434-D393-480E-87B3-2ABEA313DA68}
 		{AA4A4599-0A41-47EE-AAB4-6B9EADCD237B} = {38DCA434-D393-480E-87B3-2ABEA313DA68}
+		{C566AA1B-2B48-41D8-BF2C-C0BFFBA05291} = {F839F455-436C-4CE3-BD91-0863EA08013E}
 	EndGlobalSection
 EndGlobal

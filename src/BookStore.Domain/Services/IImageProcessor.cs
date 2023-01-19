@@ -2,21 +2,23 @@
 namespace BookStore.Domain.Services;
 public interface IImageProcessor
 {
-    void Resize(string filePath, int width, int height);
+    byte[] Resize(byte[] fileContent, int width, int height);
     /// <summary>
     /// 將圖片壓縮及刪除metadata
     /// </summary>
     /// <param name="filePath"></param>
-    void Compress(string filePath);
+    byte[] Compress(byte[] fileContent);
 }
 
 public class FakeImageProcessor : IImageProcessor
 {
-    public void Compress(string filePath)
+    public byte[] Compress(byte[] fileContent)
     {
+        return fileContent;
     }
 
-    public void Resize(string filePath, int width, int height)
+    public byte[] Resize(byte[] fileContent, int width, int height)
     {
+        return fileContent;
     }
 }

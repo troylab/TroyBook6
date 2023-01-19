@@ -3,7 +3,7 @@
 #---------------------------------#
 project:
   # the root namespace for the project
-  namespace: 'HT.Payment'
+  namespace: 'BookStore'
   # the root directory for the project
   directory: ./generated/
   # output should support nullable reference types

@@ -13,6 +13,9 @@
     <ProjectReference Include="..\BookStore.Repository.EFCore\BookStore.Repository.EFCore.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\BookStore.AzureService\BookStore.AzureService.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Remove="NLog.Web.AspNetCore" />

@@ -9,7 +9,7 @@ namespace BookStore.API;
 public static class ServiceCollectionExtensions
 {
     /// <summary>
-    /// Strongly typed configuration that allow injection any class without IOptions
+    /// Strongly typed configuration that allow injection of any class without IOptions
     /// </summary>
     /// <typeparam name="TOptions"></typeparam>
     /// <param name="services"></param>
@@ -27,7 +27,7 @@ public static class ServiceCollectionExtensions
     }
 
     // <summary>
-    /// Strongly typed configuration that allow injection any class without IOptions
+    /// Strongly typed configuration that allow injection of any class without IOptions
     /// </summary>
     /// <typeparam name="TOptions"></typeparam>
     /// <param name="services"></param>

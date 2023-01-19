@@ -3,6 +3,7 @@ namespace BookStore.Domain;
 public class DomainOptions
 {
     public BookOptions Book { get; set; } = new BookOptions();
+    public AzureBlobOptions AzureBlob { get; set; } = new AzureBlobOptions();
 
     public class BookOptions
     {
@@ -15,4 +16,10 @@ public class DomainOptions
         /// </summary>
         public string LocalBookImageBaseUrl { get; set; } = @"/bookimages";
     }
+
+    public class AzureBlobOptions
+    {
+        public string ImageBaseContainer { get; set; } = @"images";
+    }
+
 }
