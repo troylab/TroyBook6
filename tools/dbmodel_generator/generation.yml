@@ -51,7 +51,7 @@ data:
     name: 'BookStoreDbContext'          # the data context class name
     baseClass: DbContext                    # the data context base class name
     namespace: 'BookStore.Repository.EFCore'   # the data context namespace
-    directory: '{Project.Directory}\Data'   # the data context output directory
+    directory: '{Project.Directory}Data'   # the data context output directory
 
     # how to generate names for the DbSet properties on the data context.  Default: Plural
     propertyNaming: Plural
@@ -61,7 +61,7 @@ data:
   # entity class file configuration
   entity:
     namespace: 'BookStore.Domain.Models'  # the entity class namespace
-    directory: '{Project.Directory}\Domain\Models'  # the entity class output directory
+    directory: '{Project.Directory}Domain\Models'  # the entity class output directory
 
     # how to generate entity class names from the table name.  Default: Singular
     entityNaming: Singular
@@ -77,7 +77,7 @@ data:
   # mapping class file configuration
   mapping:
     namespace: 'BookStore.Repository.EFCore.Mapping'   # the mapping class namespace
-    directory: '{Project.Directory}\Data\Mapping'   # the mapping class output directory
+    directory: '{Project.Directory}Data\Mapping'   # the mapping class output directory
     #include XML documentation
     document: false
 
@@ -87,7 +87,7 @@ data:
     indexPrefix: By         # Prefix for queries built from an index
     uniquePrefix: GetBy     # Prefix for queries built from unique indexes
     namespace: '{Project.Namespace}.Data.Queries'   # the mapping class namespace
-    directory: '{Project.Directory}\Data\Queries'   # the mapping class output directory
+    directory: '{Project.Directory}Data\Queries'   # the mapping class output directory
     #include XML documentation
     document: false
 
@@ -98,7 +98,7 @@ model:
   # shared options between read, create and update models
   shared:
     namespace: '{Project.Namespace}.Domain.Models' # the model class namespace
-    directory: '{Project.Directory}\Domain\Models' # the mapping class output directory
+    directory: '{Project.Directory}Domain\Models' # the mapping class output directory
     # regular expression of entities and properties to exclude in all models
     exclude:
       # list of regular expressions of entity names
@@ -117,7 +117,7 @@ model:
     name: '{Entity.Name}ReadModel'  # the read model class name
     baseClass: EntityReadModel      # the read model base class
     namespace: '{Project.Namespace}.Domain.Models'
-    directory: '{Project.Directory}\Domain\Models'
+    directory: '{Project.Directory}Domain\Models'
     exclude:
       entities: []
       properties: []
@@ -128,7 +128,7 @@ model:
     name: '{Entity.Name}CreateModel'    # the create model class name
     baseClass: EntityCreateModel        # the create model base class
     namespace: '{Project.Namespace}.Domain.Models'
-    directory: '{Project.Directory}\Domain\Models'
+    directory: '{Project.Directory}Domain\Models'
     exclude:
       entities: []
       properties: []
@@ -139,7 +139,7 @@ model:
     name: '{Entity.Name}UpdateModel'    # the update model class name
     baseClass: EntityUpdateModel        # the update model base class
     namespace: '{Project.Namespace}.Domain.Models'
-    directory: '{Project.Directory}\Domain\Models'
+    directory: '{Project.Directory}Domain\Models'
     exclude:
       entities: []
       properties: []
@@ -150,7 +150,7 @@ model:
     name: '{Entity.Name}Profile'
     baseClass: Profile
     namespace: '{Project.Namespace}.Domain.Mapping'
-    directory: '{Project.Directory}\Domain\Mapping'
+    directory: '{Project.Directory}Domain\Mapping'
 
   # FluentValidation class configuration
   validator:
@@ -158,14 +158,14 @@ model:
     name: '{Model.Name}Validator'
     baseClass: 'AbstractValidator<{Model.Name}>'
     namespace: '{Project.Namespace}.Domain.Validation'
-    directory: '{Project.Directory}\Domain\Validation'
+    directory: '{Project.Directory}Domain\Validation'
 # script templates
 script:
   # collection script template with EntityContext as a variable
   context:  
     - templatePath: '.\templates\context.csx'          # path to script file
       fileName: 'ContextScript.cs'                     # filename to save script output
-      directory: '{Project.Directory}\Domain\Context'  # directory to save script output
+      directory: '{Project.Directory}Domain\Context'  # directory to save script output
       namespace: '{Project.Namespace}.Domain.Context'  
       baseClass: ContextScriptBase
       overwrite: true                                  # overwrite existing file
@@ -173,7 +173,7 @@ script:
   entity:
     - templatePath: '.\templates\entity.csx'           # path to script file
       fileName: '{Entity.Name}Script.cs'               # filename to save script output
-      directory: '{Project.Directory}\Domain\Entity'   # directory to save script output
+      directory: '{Project.Directory}Domain\Entity'   # directory to save script output
       namespace: '{Project.Namespace}.Domain.Entity'  
       baseClass: EntityScriptBase
       overwrite: true                                  # overwrite existing file
@@ -181,13 +181,14 @@ script:
   model:
     - templatePath: '.\templates\model.csx'            # path to script file
       fileName: '{Model.Name}Script.cs'                # filename to save script output
-      directory: '{Project.Directory}\Domain\Models'   # directory to save script output
+      directory: '{Project.Directory}Domain\Models'   # directory to save script output
       namespace: '{Project.Namespace}.Domain.Models'  
       baseClass: ModelScriptBase
       overwrite: true                                  # overwrite existing file
     - templatePath: '.\templates\sample.csx'           # path to script file
       fileName: '{Model.Name}Sample.cs'                # filename to save script output
-      directory: '{Project.Directory}\Domain\Models'   # directory to save script output
+      directory: '{Project.Directory}Domain\Models'   # directory to save script output
       namespace: '{Project.Namespace}.Domain.Models'  
       baseClass: ModelSampleBase
       overwrite: true                                  # overwrite existing file
+
