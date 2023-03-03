@@ -1,4 +1,5 @@
 ﻿using System;
+using BookStore.API.Auth.Services;
 using BookStore.Domain;
 using BookStore.Domain.Repositories;
 using BookStore.Domain.Services;
@@ -62,6 +63,8 @@ public static class ServiceCollectionExtensions
     /// <param name="services"></param>
     public static void AddDomainServices(this IServiceCollection services)
     {
+        services.AddScoped<IIdentityService, AspIdentityService>();
+
         //services.AddScoped<IImageStorage, LocalDiskImageStorage>();
         //services.AddScoped<IImageProcessor, FakeImageProcessor>();
     }
