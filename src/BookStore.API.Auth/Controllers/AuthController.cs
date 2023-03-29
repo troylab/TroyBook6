@@ -18,15 +18,18 @@ public class AuthController : Controller
 {
 
     private readonly UserManager<IdentityUser> _userManager;
+    private readonly RoleManager<IdentityRole> _roleManager;
     private readonly IConfiguration _configuration;
 
     public AuthController
         (
             UserManager<IdentityUser> userManager,
+            RoleManager<IdentityRole> roleManager,
             IConfiguration configuration
         )
     {
         _userManager = userManager;
+        _roleManager = roleManager;
         _configuration = configuration;
     }
 
@@ -38,15 +41,20 @@ public class AuthController : Controller
         if (user == null || !(await _userManager.CheckPasswordAsync(user, rq.Password)))
             throw new Exception("user or password incorrect");
 
-        var userRoles = await _userManager.GetRolesAsync(user);
+        var userRoleNames = await _userManager.GetRolesAsync(user);
         var authClaims = new List<Claim>
         {
             new Claim(ClaimTypes.Name, user.UserName),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         };
-        foreach (var userRole in userRoles)
+        foreach (var roleName in userRoleNames)
         {
-            authClaims.Add(new Claim(ClaimTypes.Role, userRole));
+            authClaims.Add(new Claim(ClaimTypes.Role, roleName));
+
+            // add all role claims
+            var role = await _roleManager.FindByNameAsync(roleName);
+            var roleClaims = await _roleManager.GetClaimsAsync(role);
+            authClaims.AddRange(roleClaims);
         }
 
         var userClaims = await _userManager.GetClaimsAsync(user);
